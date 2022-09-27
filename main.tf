@@ -2,12 +2,22 @@ provider "aws" {
   region = "eu-west-2"
 }
 
+terraform {
+  backend "s3" {
+    encrypt = true    
+    bucket = "asim-atlantis-test-tfstate"
+    dynamodb_table = "terraform-lock"
+    key    = "terraform.tfstate"
+    region = "eu-west-2"
+  }
+}
+
 # resource "null_resource" "cluster" {}
 
 
-################################################################################
+###############################################################################
 # VPC Module
-################################################################################
+###############################################################################
 
 # module "vpc" {
 #   source = "terraform-aws-modules/vpc/aws"
