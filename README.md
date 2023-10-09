@@ -1,3 +1,3 @@
 # Terraform-atlantis-test
 
-I guess patch-3 has the complete code.
+Trying to setup ATLANTIS ENVIRONMENT with Terraform in AWS
